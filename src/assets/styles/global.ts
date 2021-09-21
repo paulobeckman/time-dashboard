@@ -7,6 +7,7 @@ export default createGlobalStyle `
         --Pale-Blue: rgba(189,193,255,0.5);
         --Text-active-color: #ffffff;
         --Background-Blue: #5847eb;
+        --Lightorange: #ff8c66;
     }
 
     * {

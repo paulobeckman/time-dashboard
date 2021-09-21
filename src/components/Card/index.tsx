@@ -1,3 +1,5 @@
+import * as S from './styles'
+
 interface CardProps {
     title: string;
     current: number;
@@ -6,15 +8,16 @@ interface CardProps {
 
 export function Card({title, current, previous}: CardProps) {
     return(
-        <div className="container__card">
-            <div className="container__card-main">
-                <div className="container__card-main-header">
+        <S.ContainerCard>
+            <img src="*" alt="" />
+            <S.Content>
+                <S.Header>
                     <p>{title}</p>
                     <i className="material-icons">more_horiz</i>
-                </div>  
+                </S.Header>  
                 <h1>{current}hrs</h1>
                 <p>Last day-{previous}hrs</p>
-            </div>
-        </div>
+            </S.Content>
+        </S.ContainerCard>
     );
 }
