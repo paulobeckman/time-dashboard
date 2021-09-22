@@ -8,6 +8,7 @@ export default createGlobalStyle `
         --Text-active-color: #ffffff;
         --Background-Blue: #5847eb;
         --Lightorange: #ff8c66;
+        --Limegreen: #4acf81;
     }
 
     * {

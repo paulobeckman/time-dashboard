@@ -1,4 +1,6 @@
 import * as S from './styles'
+import IconEllipsis from '../../assets/images/icon-ellipsis';
+import IconExercise from '../../assets/images/icon-exercise';
 
 interface CardProps {
     title: string;
@@ -9,14 +11,14 @@ interface CardProps {
 export function Card({title, current, previous}: CardProps) {
     return(
         <S.ContainerCard>
-            <img src="*" alt="" />
+            <IconExercise />
             <S.Content>
                 <S.Header>
                     <p>{title}</p>
-                    <i className="material-icons">more_horiz</i>
+                    <IconEllipsis />
                 </S.Header>  
                 <h1>{current}hrs</h1>
-                <p>Last day-{previous}hrs</p>
+                <p>Last week - {previous}hrs</p>
             </S.Content>
         </S.ContainerCard>
     );
