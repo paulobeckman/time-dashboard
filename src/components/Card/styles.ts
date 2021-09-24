@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
-export const ContainerCard = styled.div`
-    background: var(--Limegreen);
+interface ContainerCardProps {
+    background: string;
+}
+
+export const ContainerCard = styled.div<ContainerCardProps>`
+    background: ${props => props.background};
     border-radius: 15px;
 
     display: flex;
@@ -9,7 +13,7 @@ export const ContainerCard = styled.div`
     flex-direction: column;
     position: relative;
 
-    > svg {
+    > img {
         align-self: flex-end;
         position: absolute;
         margin-right: 20px;

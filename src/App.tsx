@@ -1,6 +1,6 @@
 import { Home } from "./pages/Home";
 
-import GlobalStyles from './assets/styles/global'
+import GlobalStyles from './assets/styles/global';
 
 function App() {
   return (
