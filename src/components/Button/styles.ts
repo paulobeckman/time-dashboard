@@ -8,4 +8,8 @@ export const Button = styled.a`
     &:hover{
         color: var(--Text-active-color);
     }
+
+    &.active {
+        color: var(--Text-active-color);
+    }
 `;

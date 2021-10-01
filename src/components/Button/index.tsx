@@ -1,11 +1,15 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, PropsWithChildren } from 'react';
 import * as S from './styles';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & AnchorHTMLAttributes<HTMLAnchorElement>
+type ButtonProps =
+    ButtonHTMLAttributes<HTMLButtonElement>
+    & AnchorHTMLAttributes<HTMLAnchorElement>
+    & { valueSelected: boolean }
 
-export function Button({children, ...rest}: PropsWithChildren<ButtonProps>) {
+
+export function Button({children, valueSelected, ...rest}: PropsWithChildren<ButtonProps>) {
     return(
-        <S.Button {...rest}>
+        <S.Button {...rest} className={`${valueSelected && 'active'}`}>
             {children}
         </S.Button>
     );

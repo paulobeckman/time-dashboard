@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import * as S from './styles';
 import imageJeremy from '../../assets/images/image-jeremy.png';
-import IconWork from '../../assets/images/icon-work.svg';
-import IconPlay from '../../assets/images/icon-play.svg';
-import IconStudy from '../../assets/images/icon-study.svg';
-import IconExercise from '../../assets/images/icon-exercise.svg';
-import IconSocial from '../../assets/images/icon-social.svg';
-import IconSelfCare from '../../assets/images/icon-self-care.svg';
 
 import { Button } from '../../components/Button';
 import { Card } from '../../components/Card';
@@ -14,7 +8,7 @@ import { Card } from '../../components/Card';
 import data from '../../database/data.json';
 
 export function Home(){
-    const [selectOption, setSelectOption] = useState('');
+    const [selectOption, setSelectOption] = useState('Weekly');
 
     return (
         <S.Container>
@@ -25,9 +19,24 @@ export function Home(){
                     <h1>Jeremy Robson</h1>
                 </S.Header>
                 <S.Options>
-                    <Button onClick={() => setSelectOption('Daily')}>Daily</Button>
-                    <Button onClick={() => setSelectOption('Weekly')}>Weekly</Button>
-                    <Button onClick={() => setSelectOption('Monthly')}>Monthly</Button>
+                    <Button 
+                        valueSelected={selectOption === 'Daily'}
+                        onClick={() => setSelectOption('Daily')}
+                    >
+                        Daily
+                    </Button>
+                    <Button
+                        valueSelected={selectOption === 'Weekly'}
+                        onClick={() => setSelectOption('Weekly')}
+                    >
+                        Weekly
+                    </Button>
+                    <Button
+                        valueSelected={selectOption === 'Monthly'}
+                        onClick={() => setSelectOption('Monthly')}
+                    >
+                        Monthly
+                    </Button>
                 </S.Options>
             </S.ProfileSection>
             
@@ -45,6 +54,20 @@ export function Home(){
                         color = activity.color;
                         current = activity.timeframes.daily.current;
                         previous = activity.timeframes.daily.previous;
+                        break;
+                    case 'Weekly':
+                        title = activity.title;
+                        icon = activity.icon;
+                        color = activity.color;
+                        current = activity.timeframes.weekly.current;
+                        previous = activity.timeframes.weekly.previous;
+                        break;
+                    case 'Monthly':
+                        title = activity.title;
+                        icon = activity.icon;
+                        color = activity.color;
+                        current = activity.timeframes.monthly.current;
+                        previous = activity.timeframes.monthly.previous;
                         break;
                     default:   
                         title = activity.title;
