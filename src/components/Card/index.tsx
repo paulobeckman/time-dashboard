@@ -13,14 +13,18 @@ interface CardProps {
 export function Card({title, current, previous, img, imgAlt, background}: CardProps) {
     return(
         <S.ContainerCard background={background} >
-            <img src={img} alt={imgAlt} />
+            <S.ContainerImage>
+                <img src={img} alt={imgAlt} />
+            </S.ContainerImage>
             <S.Content>
                 <S.Header>
                     <p>{title}</p>
                     <IconEllipsis />
                 </S.Header>  
-                <h1>{current}hrs</h1>
-                <p>Last week - {previous}hrs</p>
+                <span>
+                    <h1>{current}hrs</h1>
+                    <p>Last week - {previous}hrs</p>
+                </span>
             </S.Content>
         </S.ContainerCard>
     );

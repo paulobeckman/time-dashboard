@@ -15,8 +15,10 @@ export function Home(){
             <S.ProfileSection>
                 <S.Header>
                     <img src={imageJeremy} alt="avatar" />
-                    <p>Report for</p>
-                    <h1>Jeremy Robson</h1>
+                    <div>
+                        <p>Report for</p>
+                        <h1>Jeremy Robson</h1>
+                    </div>
                 </S.Header>
                 <S.Options>
                     <Button 
@@ -41,54 +43,54 @@ export function Home(){
             </S.ProfileSection>
             
             <S.CardsSection>
-            {data.map((activity, i) => {
-                let current
-                let previous
-                let title
-                let color
-                let icon
-                switch(selectOption){
-                    case 'Daily':
-                        title = activity.title;
-                        icon = activity.icon;
-                        color = activity.color;
-                        current = activity.timeframes.daily.current;
-                        previous = activity.timeframes.daily.previous;
-                        break;
-                    case 'Weekly':
-                        title = activity.title;
-                        icon = activity.icon;
-                        color = activity.color;
-                        current = activity.timeframes.weekly.current;
-                        previous = activity.timeframes.weekly.previous;
-                        break;
-                    case 'Monthly':
-                        title = activity.title;
-                        icon = activity.icon;
-                        color = activity.color;
-                        current = activity.timeframes.monthly.current;
-                        previous = activity.timeframes.monthly.previous;
-                        break;
-                    default:   
-                        title = activity.title;
-                        icon = activity.icon;
-                        color = activity.color;
-                        current = activity.timeframes.daily.current;
-                        previous = activity.timeframes.daily.previous;
-                        break;
-                }
-                return(
-                    <Card 
-                        key={i}
-                        background={color}
-                        img={icon} 
-                        imgAlt={icon} 
-                        title={title} 
-                        current={current} 
-                        previous={previous}
-                    />
-                )
-            })}
+                {data.map((activity, i) => {
+                    let current
+                    let previous
+                    let title
+                    let color
+                    let icon
+                    switch(selectOption){
+                        case 'Daily':
+                            title = activity.title;
+                            icon = activity.icon;
+                            color = activity.color;
+                            current = activity.timeframes.daily.current;
+                            previous = activity.timeframes.daily.previous;
+                            break;
+                        case 'Weekly':
+                            title = activity.title;
+                            icon = activity.icon;
+                            color = activity.color;
+                            current = activity.timeframes.weekly.current;
+                            previous = activity.timeframes.weekly.previous;
+                            break;
+                        case 'Monthly':
+                            title = activity.title;
+                            icon = activity.icon;
+                            color = activity.color;
+                            current = activity.timeframes.monthly.current;
+                            previous = activity.timeframes.monthly.previous;
+                            break;
+                        default:   
+                            title = activity.title;
+                            icon = activity.icon;
+                            color = activity.color;
+                            current = activity.timeframes.daily.current;
+                            previous = activity.timeframes.daily.previous;
+                            break;
+                    }
+                    return(
+                        <Card 
+                            key={i}
+                            background={color}
+                            img={icon} 
+                            imgAlt={icon} 
+                            title={title} 
+                            current={current} 
+                            previous={previous}
+                        />
+                    )
+                })}
             </S.CardsSection>
         </S.Container>
     );

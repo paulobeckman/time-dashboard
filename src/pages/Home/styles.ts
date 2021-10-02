@@ -4,6 +4,10 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 215px 722px;
     gap: 25px;
+
+    @media (max-width: 1023px) {
+        display: block;
+    }
 `;
 
 export const ProfileSection = styled.section`
@@ -17,7 +21,7 @@ export const Header = styled.div`
     border-radius: 15px;
     padding: 35px 30px 45px;
 
-    > img {
+    img {
         height: 70px;
         width: 70px;
         border-radius: 50%;
@@ -26,7 +30,7 @@ export const Header = styled.div`
         margin-bottom: 35px;
     }
 
-    > p {
+    p {
         font-weight: 300;
         font-size: 13px;
         color: var(--Pale-Blue);
@@ -34,10 +38,32 @@ export const Header = styled.div`
         margin-bottom: 5px;
     }
 
-    > h1 {
+    h1 {
         font-weight: 300;
         font-size: 32px;
         color: var(--Text-active-color);
+    }
+
+    @media (max-width: 1023px) {
+        display: flex;
+        gap: 35px;
+        justify-content: center;
+
+        padding: 35px 30px;
+
+        img {
+            height: 100px;
+            width: 100px;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 45px;
+        }
     }
 `;
 
@@ -47,6 +73,15 @@ export const Options = styled.div`
     row-gap: 15px;
 
     padding: 30px;
+
+    @media (max-width: 1023px) {
+        flex-direction: row;
+        justify-content: space-around;
+
+        a {
+            font-size: 22px;
+        }
+    }
 `;
 
 export const CardsSection = styled.section`
@@ -55,4 +90,10 @@ export const CardsSection = styled.section`
     gap: 25px;
 
     width: 100%;
+
+    @media (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
 `;
