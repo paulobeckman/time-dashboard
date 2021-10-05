@@ -1,12 +1,25 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Conteiner = styled.div`
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    @media (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+`;
+
+export const ContainerSection = styled.div`
     display: grid;
     grid-template-columns: 215px 722px;
     gap: 25px;
+    margin: 0 auto;
 
     @media (max-width: 1023px) {
         display: block;
+        max-width: 1000px;
     }
 `;
 
@@ -65,6 +78,21 @@ export const Header = styled.div`
             font-size: 45px;
         }
     }
+
+    @media (max-width: 450px) {
+        img {
+            height: 85px;
+            width: 85px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+    }
 `;
 
 export const Options = styled.div`
@@ -80,6 +108,12 @@ export const Options = styled.div`
 
         a {
             font-size: 22px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        a{
+            font-size: 18px;
         }
     }
 `;

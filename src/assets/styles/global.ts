@@ -22,11 +22,6 @@ export default createGlobalStyle `
         background: var(--Very-dark-blue);
         font-family: 'Rubik', sans-serif;
         font-size: 18px;
-
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     a{

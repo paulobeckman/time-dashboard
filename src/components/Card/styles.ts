@@ -65,6 +65,16 @@ export const Content = styled.div`
             margin-top: 10px;
         }
     }
+
+    @media (max-width: 450px) {
+        span h1 {
+            font-size: 32px;
+        }
+
+        span p {
+            font-size: 18px;
+        }
+    }
 `;
 
 export const Header = styled.div`
@@ -81,6 +91,12 @@ export const Header = styled.div`
     @media (max-width: 1023px) {
         > p {
             font-size: 26px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        > p {
+            font-size: 1.17rem;
         }
     }
 `;
