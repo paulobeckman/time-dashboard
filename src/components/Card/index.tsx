@@ -18,7 +18,7 @@ export function Card({title, current, previous, img, imgAlt, background}: CardPr
             </S.ContainerImage>
             <S.Content>
                 <S.Header>
-                    <p>{title}</p>
+                    <p>{title}</p> 
                     <IconEllipsis />
                 </S.Header>  
                 <span>
